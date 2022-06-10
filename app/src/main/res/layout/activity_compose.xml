@@ -5,29 +5,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/twitter_blue_30"
     tools:context=".ComposeActivity">
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
         app:counterEnabled="true"
         app:counterMaxLength="144">
 
+
         <EditText
+            android:id="@+id/etCompose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:ems="10"
-            android:id="@+id/etCompose"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:ems="10"
             android:gravity="start|top"
             android:hint="What's happening?"
             android:minLines="5"
-            android:textColorHint="#546E7A"/>
+            android:textColorHint="#546E7A"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -35,7 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="165dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="388dp"
+        android:background="@color/twitter_blue_50"
         android:text="@string/tweet" />
 </RelativeLayout>

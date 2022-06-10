@@ -7,10 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".TimelineActivity">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/twitter_blue_50"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:id="@+id/Header"
+            android:layout_width="150dp"
+            android:layout_height="61dp"
+            android:text="Twitter"
+            android:textSize="25dp"
+            android:gravity="left|center" />
+
+        <Button
+            android:id="@+id/LogOutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_marginLeft="170dp"
+            tools:text="Log out" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="0dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTweets"
@@ -19,16 +49,11 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp" />
+            android:layout_marginEnd="0dp"
+            android:background="@color/twitter_blue_30" />
 
-        <Button
-            android:id="@+id/btnLogOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rvTweets"
-            android:layout_marginTop="26dp"
-            android:text="Log Out" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </RelativeLayout>
