@@ -9,14 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -60,7 +57,6 @@ public class TimelineActivity extends AppCompatActivity {
         client = TwitterApp.getRestClient(this);
 
 
-
         // Find the recycler view
         rvTweets = findViewById(R.id.rvTweets);
         // Init the list of tweets and adapter
@@ -98,6 +94,7 @@ public class TimelineActivity extends AppCompatActivity {
                 //Add whatever code is needed to append new items to the bottom of the list
                 Tweet lastTweetBeingDisplayed = tweets.get(tweets.size()-1);
                 String maxId = lastTweetBeingDisplayed.id;
+
                 populateHomeTimeline(maxId);
             }
         };

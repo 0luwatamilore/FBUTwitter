@@ -2,6 +2,8 @@ package com.codepath.apps.restclienttemplate.models;
 
 import android.util.Log;
 
+import androidx.room.Entity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

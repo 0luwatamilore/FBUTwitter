@@ -63,6 +63,8 @@ public class ComposeActivity extends AppCompatActivity {
                             Log.i(TAG, "Published Tweet says: " + tweet.body);
                             Intent intent = new Intent ();
                             intent.putExtra("tweet", Parcels.wrap(tweet));
+                            finish();
+//                            intent = new Intent ();
 
                             // Set result code and bundle data for response
                             setResult(RESULT_OK, intent);

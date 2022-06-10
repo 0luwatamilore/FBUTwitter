@@ -47,7 +47,7 @@
         android:layout_marginStart="165dp"
         android:layout_marginTop="165dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="440dp"
         android:background="@color/twitter_blue_50"
         android:text="@string/tweet" />
 </RelativeLayout>
